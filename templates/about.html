@@ -1,7 +1,4 @@
 {% extends 'base.html' %} {% block content %}
-{% for number in list_of_numbers%}
-<p>{{number}}</p>
-{%endfor%}
 <h2>{{page_title}}</h2>
 <p>
   The formation of the group grew out of a meeting Gandalf had with Thorin in
@@ -15,6 +12,8 @@
   considered thirteen to be an unlucky number, and as Gandalf had planned to
   leave on other business, welcomed a fourteenth to fill into their party.
 </p>
+
+{{ company_data[1]["name"] }}
 <div class="row featurette">
   <div class="col-md-7">
     <h3>Thorin Oakenshield</h3>
