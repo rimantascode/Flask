@@ -5,7 +5,7 @@ In  return render_template("careers.html", page_title="Careers") we can add as m
 """
 import os
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
@@ -36,8 +36,10 @@ def about_member(member_name):
     return render_template("member.html", member=member)
 
 
-@app.route('/contact')
+@app.route('/contact', methods=["GET","POST"])
 def contact():
+    if request.method=="POST":
+        print(request.form)
     return render_template("contact.html", page_title="Contact")
 
 
